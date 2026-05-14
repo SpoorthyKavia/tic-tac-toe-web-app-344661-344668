@@ -92,7 +92,7 @@ describe('Tic-Tac-Toe gameplay', () => {
     // X O X
     // X X O
     // O X O
-    const moves = [0, 1, 2, 5, 3, 4, 6, 8, 7];
+    const moves = [0, 1, 2, 3, 4, 6, 5, 8, 7];
     moves.forEach((idx) => clickSquare(idx));
 
     expect(screen.getByRole('status')).toHaveTextContent(/^draw$/i);
