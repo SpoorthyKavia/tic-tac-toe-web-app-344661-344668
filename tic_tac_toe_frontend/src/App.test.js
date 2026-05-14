@@ -93,7 +93,13 @@ describe('Tic-Tac-Toe gameplay', () => {
     // X X O
     // O X O
     // Note: move order matters; ensure no winning line is created.
-    const moves = [0, 1, 2, 5, 3, 4, 6, 8, 7];
+    // Verified draw move order:
+    // X:0 O:1 X:2 O:4 X:3 O:5 X:7 O:6 X:8
+    // Final board:
+    // X O X
+    // X O O
+    // O X X
+    const moves = [0, 1, 2, 4, 3, 5, 7, 6, 8];
     moves.forEach((idx) => clickSquare(idx));
 
     expect(screen.getByRole('status')).toHaveTextContent(/^draw$/i);
